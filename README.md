@@ -22,7 +22,7 @@ Follow the steps below to get your environment set up for run this application.
    ```bash
    http://localhost:8000
 
-5. If there is any issue in backend please run this command(Optional)
+5. If there is any issue in backend please run this command and repeat from step 3(Optional)
    ```bash
    docker-compose exec backend composer install
 
