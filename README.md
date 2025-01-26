@@ -30,7 +30,7 @@ Follow the steps below to get your environment set up for run this application.
    ```bash
    http://localhost:8080
 
-7. Run backend Unit test and Integration test(Optional)
+7. Run backend Unit test and Integration test
    ```bash  
    docker-compose exec backend php artisan test
 
