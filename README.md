@@ -2,6 +2,7 @@
 
 
 ## Installation
+This to-do application is built with a Laravel API backend and a Vue.js frontend. It allows users to create, update, and delete to-do items, with data stored in a MySQL database. The app supports various endpoints (GET, POST, PATCH, DELETE) for CRUD operations. It also uses unit and integration testing for the backend, and Cypress for end-to-end testing of the frontend.
 
 Follow the steps below to get your environment set up for development.
 
