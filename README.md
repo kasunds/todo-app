@@ -18,11 +18,15 @@ Follow the steps below to get your environment set up for run this application.
    ```bash  
    docker-compose exec backend php artisan migrate
 
-4. Run backend Unit test and Integration test(Optional)
+4. Frontend can access using
+   ```bash
+   http://localhost:8080
+
+5. Run backend Unit test and Integration test(Optional)
    ```bash  
    docker-compose exec backend php artisan test
 
-5. Run frontend e2e(Optional) - run inside the frontend folder
+6. Run frontend e2e(Optional) - run inside the frontend folder
    ```bash  
    npx cypress open
 
