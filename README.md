@@ -1,5 +1,6 @@
 # TODO APP
 
+![Project Screenshot](https://github.com/kasunds/master/screen.png)
 
 ## Installation
 This todo application is built with a Laravel API backend and a Vue.js frontend. It allows users to create, update, and delete todo items, with data stored in a MySQL database. The app supports various endpoints (GET, POST, PATCH, DELETE) for CRUD operations. Test cases related to unit and integration testing for the backend also included.

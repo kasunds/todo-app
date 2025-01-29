@@ -33,33 +33,35 @@
       </div>
     </div>
     <v-snackbar v-model="alert" location="top">
-      Task Saved
+      {{text}}
     </v-snackbar>
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, defineEmits } from 'vue'
 import axios from "axios"
-export default {
-  data() {
-    return {
-      loading: false,
-      title: "",
-      description: "",
-      alert: false
-    }
-  },
-  methods: {
-    async addTodo() {
-      this.alert = false
-      this.loading = true
-      await axios.post("http://localhost:8000/api/todos", { title: this.title, description: this.description })
-      this.title = "";
-      this.description = ""
-      this.$emit("fetch-todo")
-      this.loading = false
-      this.alert = true
-    },
-  },
+
+const emit = defineEmits(['fetch-todos'])
+const loading = ref(false)
+const title = ref('')
+const description = ref('')
+const text = ref(null)
+const alert = ref(false)
+
+const addTodo = async () => {
+  try {
+    alert.value = false
+    loading.value = true
+    await axios.post("http://localhost:8000/api/todos", { title: title.value, description: description.value })
+    title.value = ""
+    description.value = ""
+    emit("fetch-todos")
+    loading.value = false
+    text.value = "Task Saved"
+  } catch (error) {
+    text.value = 'Error ', error
+  }
+  alert.value = true
 }
 </script>
