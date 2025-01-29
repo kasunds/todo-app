@@ -4,7 +4,8 @@
     <div class="modal-content bg-zinc-800">
       <div class="flex justify-between items-center mb-4">
         <h3 class="text-xl font-bold">New Task</h3>
-        <button onclick="closeModal('newTaskModal')" class="text-gray-400 hover:text-white transition-colors cursor-pointer">
+        <button onclick="closeModal('newTaskModal')"
+          class="text-gray-400 hover:text-white transition-colors cursor-pointer">
           <i class="fa fa-times"></i>
         </button>
       </div>
@@ -33,7 +34,7 @@
       </div>
     </div>
     <v-snackbar v-model="alert" location="top">
-      {{text}}
+      {{ text }}
     </v-snackbar>
   </div>
 </template>

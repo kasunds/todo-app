@@ -1,5 +1,6 @@
 <template>
-    <div class="task-item bg-zinc-900 hover:shadow-md hover:bg-zinc-800 rounded-lg p-4 transform transition-all duration-300">
+    <div
+        class="task-item bg-zinc-900 hover:shadow-md hover:bg-zinc-800 rounded-lg p-4 transform transition-all duration-300">
         <div class="flex flex-col lg:flex-row md:flex-row justify-between items-start">
             <div>
                 <h3 class="font-bold">{{ todo.title }}</h3>
@@ -36,7 +37,7 @@ import { ref, defineProps, defineEmits } from 'vue'
 import axios from 'axios'
 
 defineProps({
-  todo: Object
+    todo: Object
 })
 
 const emit = defineEmits(['fetch-todos'])
